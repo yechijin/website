@@ -21,10 +21,11 @@ header {
   text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
-/* NAV BELOW HEADER */
+/* NAV UNDER HEADER */
 nav {
   position: relative;
   background-color: transparent;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
   padding: 10px;
   text-align: center;
   margin-bottom: 30px;
@@ -90,8 +91,24 @@ h2 {
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
+/* BUTTON HOVER EFFECT */
+.product button:hover {
+  background-color: palevioletred;
+}
+
+/* BEST SELLERS PADDING */
+#home .product {
+  padding: 20px;          /* Added padding for Best Sellers boxes */
+  border-radius: 8px;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   color: white;
@@ -139,22 +156,18 @@ footer {
       <div class="product">
         <img src="images/bologna.png">
         <h3>Bologna</h3>
-        <p>Classic processed meat with a mild, savory taste. Perfect for sandwiches and quick snacks.</p>
       </div>
       <div class="product">
         <img src="images/embutido.jpg">
         <h3>Embutido</h3>
-        <p>Filipino-style meatloaf mixed with spices and veggies. Perfect for sharing with family.</p>
       </div>
       <div class="product">
         <img src="images/skinless.jpg">
         <h3>Skinless</h3>
-        <p>Savory and flavorful sausage without casing. Easy to cook and perfect for breakfast meals.</p>
       </div>
       <div class="product">
         <img src="images/pork tocino.png">
         <h3>Pork Tocino</h3>
-        <p>Sweet and tender cured pork, ideal for classic Filipino breakfasts.</p>
       </div>
     </div>
   </div>
@@ -261,9 +274,8 @@ footer {
   <div class="box">
     <p>
       We are committed to providing high-quality frozen goods 
-      that you can trust. Our products are carefully selected, 
-      properly stored, and handled with the utmost care to ensure 
-      freshness, safety, and customer satisfaction.
+      that you can trust. Properly stored and handled to ensure 
+      freshness, safety, and satisfaction.
     </p>
   </div>
 </section>
@@ -299,4 +311,3 @@ function orderMessenger(product) {
 
 </body>
 </html>
-
