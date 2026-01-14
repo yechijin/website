@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JANGIE'S Frozen Goodies</title>
+
+  <!-- BASIC CSS (You can edit colors, sizes, and fonts easily) -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      background-image: url(images/bg\ ewan.jpg);
+      background-size: cover;
+      background-position: center;
+      color: #333;
+    }
+
+    header {
+      background-color: transparent;
+      color:white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: transparent;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color:white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color:white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      background-color:whitesmoke;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background-color: whitesmoke;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .product button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border: none;
+      background-color: rosybrown;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .product button:hover {
+      background-color: palevioletred;
+    }
+
+    footer {
+      background-color: transparent;
+      color:whitesmoke;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* MOBILE FRIENDLY DESIGN */
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      section {
+        padding: 20px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER / HOME -->
+<header id="home">
+  <h1>JANGIE's FROZEN GOODIES</h1>
+</header>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#order">How to Order</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="#policies">Policies</a>
+</nav>
+
+<!-- HOME DESCRIPTION -->
+<section>
+  <h2>Home</h2>
+  <div class="box">
+    <p>
+      Welcome to JANGIE's Frozen Goodies! We provide fresh, safe, 
+      and budget-friendly frozen foods, made to keep your 
+      family meals easy and delicious.</p>
+    <p><strong>Best Sellers</strong></p>
+    <div class="products">
+      <div class="product">
+        <img src="images/bologna.png" alt="Bologna">
+        <h3>Bologna</h3>
+      </div>
+      <div class="product">
+        <img src="images/embutido.jpg" alt="Embutido">
+        <h3>Embutido</h3>
+      </div>
+      <div class="product">
+        <img src="images/skinless.jpg" alt="Skinless">
+        <h3>Skinless</h3>
+      </div>
+      <div class="product">
+        <img src="images/pork tocino.png" alt="Pork Tocino">
+        <h3>Pork Tocino</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS SECTION -->
+<section id="products">
+  <h2>Our Products</h2>
+  <div class="products">
+
+    <!-- PRODUCT 1 -->
+    <div class="product">
+      <img src="images/bologna.png" alt="Bologna">
+      <h3>Bologna</h3>
+      <p>Classic processed meat with a mild, savory taste. 
+        Perfect for sandwiches and quick snacks.</p>
+      <p><strong>₱60.00</strong></p>
+      <button onclick="orderMessenger('Bologna')">Order via Messenger</button>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="product">
+      <img src="images/ham.png" alt="Ham">
+      <h3>Ham</h3>
+      <p>Juicy and flavorful ham, great for breakfast, 
+        sandwiches, or holiday meals.</p>
+      <p><strong>₱75.00</strong></p>
+      <button onclick="orderMessenger('Ham')">Order via Messenger</button>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="product">
+      <img src="images/hotdog.jpg" alt="Hotdog">
+      <h3>Hotdog</h3>
+      <p>All-time favorite hotdog with a smoky, savory flavor. 
+        Easy to cook and loved by all ages.</p>
+      <p><strong>₱55.00</strong></p>
+      <button onclick="orderMessenger('Hotdog')">Order via Messenger</button>
+    </div>
+
+    <!-- PRODUCT 4 -->
+    <div class="product">
+      <img src="images/longganisa.png" alt="Longganisa">
+      <h3>Longganisa</h3>
+      <p>Sweet and garlicky Filipino sausage, 
+        best paired with rice and egg for a satisfying meal.</p>
+      <p><strong>₱70.00</strong></p>
+      <button onclick="orderMessenger('Longganisa')">Order via Messenger</button>
+    </div>
+
+    <!-- PRODUCT 5 -->
+    <div class="product">
+      <img src="images/skinless.jpg" alt="Skinless">
+      <h3>Skinless</h3>
+      <p>Savory and flavorful sausage without casing. 
+        Easy to cook and perfect for breakfast meals.</p>
+      <p><strong>₱75.00</strong></p>
+      <button onclick="orderMessenger('Skinless')">Order via Messenger</button>
+    </div>
+
+    <!-- PRODUCT 6 -->
+    <div class="product">
+      <img src="images/embutido.jpg" alt="Embutido">
+      <h3>Embutido</h3>
+      <p>Filipino-style meatloaf mixed with spices and veggies. 
+        Perfect for sharing with family.</p>
+      <p><strong>₱75.00</strong></p>
+      <button onclick="orderMessenger('Embutido')">Order via Messenger</button>
+    </div>
+
+    <!-- PRODUCT 7 -->
+    <div class="product">
+      <img src="images/chicken hatdog.png" alt="Chicken Hotdog">
+      <h3>Chicken Hotdog</h3>
+      <p>A lighter alternative made from chicken. 
+        Still tasty, juicy, and kid-friendly.</p>
+      <p><strong>₱65.00</strong></p>
+      <button onclick="orderMessenger('Chicken Hotdog')">Order via Messenger</button>
+    </div>
+
+    <!-- PRODUCT 8 -->
+    <div class="product">
+      <img src="images/pork tocino.png" alt="Pork Tocino">
+      <h3>Pork Tocino</h3>
+      <p>Sweet and tender cured pork, ideal for 
+        classic Filipino breakfasts.</p>
+      <p><strong>₱90.00</strong></p>
+      <button onclick="orderMessenger('Pork Tocino')">Order via Messenger</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW TO ORDER -->
+<section id="order">
+  <h2>How to Order</h2>
+  <div class="box">
+    <ol>
+      <li>Contact the owner via SMS, Messenger, or Email.</li>
+      <li>Send your order (product name and quantity).</li>
+      <li>Wait for order confirmation.</li>
+      <li>Pay and wait for delivery or pickup.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="box">
+    <p><strong>Phone:</strong> 0951-371-8010</p>
+    <p><strong>Facebook:</strong> Valerie Jean</p>
+    <p><strong>Email:</strong> aike.jang01527@gmail.com</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About the Business</h2>
+  <div class="box">
+    <p>
+      We are committed to providing high-quality frozen goods 
+      that you can trust. Our products are carefully selected, 
+      properly stored, and handled with the utmost care to ensure 
+      freshness, safety, and customer satisfaction. From our freezer 
+      to your table, we make sure every item maintains its flavor and
+      quality, so you can enjoy convenient, delicious meals anytime.
+    </p>
+  </div>
+</section>
+
+<!-- POLICIES -->
+<section id="policies">
+  <h2>Policies</h2>
+  <div class="box">
+    <p><strong>Orders:</strong> No cancellation once order is confirmed.</p>
+    <p><strong>Payments:</strong> Payment first.</p>
+    <p><strong>Refunds:</strong> Only for damaged or incorrect items. No video, no refund.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 JANGIE's Frozen Goodies. All rights reserved.</p>
+</footer>
+
+<!-- SIMPLE JAVASCRIPT -->
+<script>
+  function orderMessenger(product) {
+    var pageUsername = "valeriejean.bautistanuguit"; // Your FB Messenger username
+    var message = encodeURIComponent("Hello! I would like to order: " + product);
+    var url = "https://m.me/" + pageUsername + "?text=" + message;
+    window.open(url, '_blank'); // Opens Messenger in a new tab
+  }
+</script>
+
+</body>
+</html>
